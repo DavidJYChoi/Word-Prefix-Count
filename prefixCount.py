@@ -154,61 +154,48 @@ def featureCount():
     answerFileQ3.write("science " + str((df["science"].sum() / len(arrOfURLS))) + str(list(df2["science"])) +
                        str(math.log(len(arrOfURLS) / (1 + len(frequencyOfScience)))) + "\n")
                        
-      # Sorting by Prefix
-    # answerFile = open("Q2.txt", "w")
+    # Sorting by Prefix
+    answerFile = open("Q2.txt", "w")
     # Wri Prefix
-    # listWR = ['write', 'writing', 'wrote', 'writes', 'written']
-    # answerFile.write("[" + "'write', 'writing', 'wrote', 'writes', 'written'" + "] " + "[")
-    # stringWR = ""
-    # for i in listWR:
-    # if {i}.issubset(df.columns):
-    # stringWR = stringWR + (str(df[i].sum()) + ",")
-    # else:
-    # stringWR = stringWR + ("0" + ",")
-    # stringWR = stringWR[:-1]
-    # stringWR = stringWR + ("]" + "\n")
-    # answerFile.write(stringWR)
+    listWR = ['write', 'writing', 'wrote', 'writes', 'written']
+    answerFile.write("[" + "'write', 'writing', 'wrote', 'writes', 'written'" + "] " + "[")
+    stringWR = ""
+    for i in listWR:
+      if {i}.issubset(df.columns):
+        stringWR = stringWR + (str(df[i].sum()) + ",")
+      else:
+        stringWR = stringWR + ("0" + ",")
+        stringWR = stringWR[:-1]
+        stringWR = stringWR + ("]" + "\n")
+        answerFile.write(stringWR)
 
     # Ret Prefix
-    # listRET = ['return', 'returns', 'returned', 'returning']
-    # answerFile.write("[" + "'return', 'returns', 'returned', 'returning'" + "]" + "[")
-    # stringRET = ""
-    # for i in listRET:
-    # if {i}.issubset(df.columns):
-    # stringRET = stringRET + (str(df[i].sum()) + ",")
-    # else:
-    # stringRET = stringRET + ("0" + ",")
-    # stringRET = stringRET[:-1]
-    # stringRET = stringRET + ("]" + "\n")
-    # answerFile.write(stringRET)
+    listRET = ['return', 'returns', 'returned', 'returning']
+    answerFile.write("[" + "'return', 'returns', 'returned', 'returning'" + "]" + "[")
+    stringRET = ""
+    for i in listRET:
+        if {i}.issubset(df.columns):
+            stringRET = stringRET + (str(df[i].sum()) + ",")
+        else:
+            stringRET = stringRET + ("0" + ",")
+            stringRET = stringRET[:-1]
+            stringRET = stringRET + ("]" + "\n")
+            answerFile.write(stringRET)
 
     # Sci Prefix
-    # listSCI = ['science', 'sciences', 'scientific', 'scientist', 'scientists']
-    # answerFile.write("[" + "'science', 'sciences', 'scientific', 'scientist', 'scientists'" + "]" + "[")
-    # stringSCI = ""
-    # for i in listSCI:
-    # if {i}.issubset(df.columns):
-    # stringSCI = stringSCI + (str(df[i].sum()) + ",")
-    # else:
-    # stringSCI = stringSCI + ("0" + ",")
-    # stringSCI = stringSCI[:-1]
-    # stringSCI = stringSCI + ("]" + "\n")
-    # answerFile.write(stringSCI)
+    listSCI = ['science', 'sciences', 'scientific', 'scientist', 'scientists']
+    answerFile.write("[" + "'science', 'sciences', 'scientific', 'scientist', 'scientists'" + "]" + "[")
+    stringSCI = ""
+    for i in listSCI:
+        if {i}.issubset(df.columns):
+            stringSCI = stringSCI + (str(df[i].sum()) + ",")
+        else:
+            stringSCI = stringSCI + ("0" + ",")
+            stringSCI = stringSCI[:-1]
+            stringSCI = stringSCI + ("]" + "\n")
+            answerFile.write(stringSCI)
 
-    # Use Prefix
-    # listUse = ['use', 'usage', 'used', 'user', 'uses', 'using']
-    # answerFile.write("[" + "'use', 'usage', 'used', 'user', 'uses', 'using'" + "]" + "[")
-    # stringUse = ""
-    # for i in listUse:
-    # if {i}.issubset(df.columns):
-    # stringUse = stringUse + (str(df[i].sum()) + ",")
-    # else:
-    # stringUse = stringUse + ("0" + ",")
-    # stringUse = stringUse[:-1]
-    # stringUse = stringUse + ("]" + "\n")
-    # answerFile.write(stringUse)
-
-    # Work Prefix
+  
     # listWork = ['work', 'worker', 'working', 'worked', 'works', 'workers']
     # answerFile.write("[" + "work', 'worker', 'working', 'worked', 'works', 'workers'" + "]" + "[")
     # stringWork = ""
